@@ -27,7 +27,7 @@ def make_output(data, key):
     def make_line(entry):
         id = entry['id']
         value = entry[key]
-        return f'{name}{{id="{id}"}}={value}'
+        return f'{name}{{id="{id}"}} {value}'
 
     entries = list(map(make_line, data))
     if len(entries) > 0:
